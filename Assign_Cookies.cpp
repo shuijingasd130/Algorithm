@@ -16,7 +16,7 @@ public:
         std::sort(s.begin(), s.end());
         int child = 0;  //已满足了几个孩子
         int cookie = 0;  //已尝试了几个糖果
-        while(child<=s.size() && cookie<=g.size()){
+        while(child < g.size() && cookie < s.size()){
             if(g[child] <= s[cookie]){
                 child++;
             }
@@ -25,6 +25,4 @@ public:
         return child;
     }
 };
-
-
 
